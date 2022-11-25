@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>Код помилки (<b>404</b>)</p>
+<p>Поверніться на <u><b><a href="{{ url_for('index') }}">головну</a></b></u> сторінку</p>
+{% endblock %}

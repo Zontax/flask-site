@@ -1,0 +1,28 @@
+ul.mainmenu {
+    background-color: #1d1b23;
+    list-style: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 16px 0px;
+    font-size: 20px;
+}
+ul.mainmenu li {
+    float: left;
+}
+ul.mainmenu li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 20px 20px;
+}
+ul.mainmenu li a:not(a#time):hover {
+    background-color: #29262f;
+    color: #e8e8e8;
+    transition: 0.2s;
+}
+ul.mainmenu li.username {
+    float: right;
+}
+.header {
+    background-color: aqua;
+}

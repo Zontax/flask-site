@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>An unexpected error has occurred</h1>
+<p>The administrator has been notified. Sorry for the inconvenience!</p>
+<p>Код помилки (<b>500</b>)</p>
+<p>Поверніться на <u><b><a href="{{ url_for('index') }}">головну</a></b></u> сторінку</p>
+{% endblock %}

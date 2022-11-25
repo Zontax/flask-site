@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='/css/theme.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='/css/index.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='/css/header.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='/css/sidebar.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='/img/favicon.ico') }}" type="image/png" rel="shortcut icon" />
+    <script src="{{ url_for('static', filename='/js/jquery/moment.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jq.js') }}"></script>
+    <meta charset="UTF-8">
+    {% block title %}
+    {% if title %}
+    <title>{{ title }} - Flask</title>
+    {% else %}
+    <title>Flask</title>
+    {% endif %}
+    {% endblock %}
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+</head>
+
+<body>
+    <nav id="mainmenu">
+        <ul class="mainmenu">
+            <li class="logo"><a href="{{ url_for('index') }}">
+                    Flask [main]</a></li>
+            <li><a href="{{ url_for('index') }}">
+                    Posts</a></li>
+            <li><a href="{{ url_for('contact') }}">
+                    Contact</a></li>
+            <li><a href="{{ url_for('portfolio') }}">
+                    Portfolio</a></li>
+            <li class="username"><a href="{{ url_for('index') }}">
+                    Register</a></li>
+            <li class="username"><a href="{{ url_for('index') }}">
+                    Login</a></li>
+            <li class="username"><a id="time">
+                    00:00:00 00 00 2022</a></li>
+            <input placeholder="Search" oninput="onInputSearch(this)" onmouseenter="onMouseEnterSearch()" />
+            <button id="search" onclick="onClickSearch(this)"> Ок  </button>
+            <button id="theme-btn" onclick="changeTheme()"> Змінити тему </button>
+        </ul>
+    </nav>
+    <nav id="sidebar">
+        <div class="toggle-btn" onclick="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li>Slide bar</li>
+            <li><a href="{{ url_for('test') }}">Test</a></li>
+            <li><a href="{{ url_for('index') }}">menu 2</a></li>
+            <li><a href="{{ url_for('index') }}">menu 3</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}
+        <h1>Це базовий шаблон сайта</h1>
+        {% endblock %}
+    </div>
+    <!-- <footer class="footer">©copyright</footer> -->
+    <script>
+        function openMenu() {
+            document.getElementById('sidebar').classList.toggle('active')
+        }
+        function changeTheme() {
+            document.getElementById('theme-btn').classList.toggle('active-theme')
+        }
+    </script>
+    <script src="{{ url_for('static', filename='js/updateTime.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+
+</html>
