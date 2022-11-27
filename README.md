@@ -4,7 +4,7 @@
 
 ### Це простенький сайт на якому я вчусь робити Back і трішки Front, та вчусь використовувати Git
 > Є дві гілки
->> maim
+>> main
 >> template
 >
 ***
@@ -20,7 +20,7 @@
 #### Посилання
 | Name | http:/ |
 | ------ | ------ |
-| GitHub | [plugins/github/README.md][PlGh] |
+| GitHub | [https://github.com/Zontax/flask-site] |
 | Google Drive | [plugins/googledrive/README.md][PlGd] |
 
 [jQuery]: <http://jquery.com>
